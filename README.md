@@ -1,6 +1,6 @@
 ## 💡 Model-View-Controller starter code for Express
 
-Full version of the Model View Controller pattern using Express as webserver and MongoDB as database driver.
+Full version of the Model View Controller pattern using Express as Webserver and MongoDB as database driver.
 
 ### Folder structure
 1. Routes - Includes all the routes to specific pages for example */users*.
