@@ -3,7 +3,7 @@
 Full version of the Model View Controller pattern using Express as Webserver and MongoDB as database driver.
 
 ### Folder structure
-1. Routes - Includes all the routes to specific pages for example */users*.
+1. Routes - Includes all the routes to specific pages with `POST`, `GET`, `PUT` and `DELETE` requests.
 1. **Models** - All the models and schemas for the database.
 1. **Views** - The views HTML files.
 1. **Controllers** - When Route is reached a controller action handles the request.
