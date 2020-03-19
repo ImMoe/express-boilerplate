@@ -1,10 +1,16 @@
+/* Import .env config settings */
+require("dotenv").config();
+/* External Node modules */
 const express = require("express");
 const bodyParser = require("body-parser");
+
+/* Internal Node modules */
 const webRoutes = require("./routes/web");
+const database = require("./database/config");
 
 /* Default settings for express */
 const app = express();
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
