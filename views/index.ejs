@@ -1,30 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="container">
-        <a href="#" class="navbar-brand">Site</a>
-        <ul class="navbar-nav">
-          <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container mt-4">
-      <h3>Welcome</h3>
-      <p>Server up and running with Express!</p>
-      <p>Modify this page in: <code>views/index.ejs</code></p>
-      <img src="/images/github.png" alt="Github" width="200" />
-    </div>
-  </body>
-</html>
+<%- include("partials/header.ejs") %>
+<div class="container mt-3">
+  <h3>Welcome to Express Starter</h3>
+  <p>Create your first route in <code>routes/web.js</code></p>
+  <img src="images/github.png" alt="Github" width="200" />
+</div>
+<%- include("partials/footer.ejs") %>

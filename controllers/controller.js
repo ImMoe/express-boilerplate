@@ -6,10 +6,6 @@
  * @destroy => Remove query from database
  */
 
-const Message = require("../models/Message");
-
-exports.index = (req, res) => {
-  // const firstMessage = new Message({ message: "Hello World!" });
-  // firstMessage.save();
+exports.index = async (req, res) => {
   res.render("index");
 };

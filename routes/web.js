@@ -5,4 +5,4 @@ const Router = express.Router();
 /* Respond to routes with controllers actions */
 Router.get("/", controller.index);
 
-module.exports = Router;    
+module.exports = Router;
