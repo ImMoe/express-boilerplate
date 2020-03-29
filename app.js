@@ -4,20 +4,31 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
+const session = require("express-session");
 
 /* Internal Node modules */
 const webRoutes = require("./routes/web");
+const authRoutes = require("./routes/auth");
 const database = require("./database/config");
 
 /* Default settings for express */
 const app = express();
+app.use(session({
+    secret: "Very secret",
+    resave: false,
+    saveUninitialized: false
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-/* Default routes */
+/**
+ * To enable Authentication uncomment or comment the app.use("/auth") to not use authentication.
+ */
+app.use("/auth", authRoutes);
 app.use("/", webRoutes);
+
 
 /* Start server with port specified */
 const PORT = process.env.PORT || 3000;
