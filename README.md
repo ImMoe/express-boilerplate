@@ -2,7 +2,7 @@
 
 Full version of the Model View Controller pattern using Express as Webserver and MongoDB as database driver.
 
-[!Attachment](https://i.imgur.com/P0LVggA.png)
+![Attachment](https://i.imgur.com/P0LVggA.png)
 
 ### Folder structure
 
