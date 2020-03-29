@@ -1,4 +1,4 @@
-## 💡 Model-View-Controller starter code for Express
+## 💡 Model-View-Controller starter code for Express including Authentication
 
 Full version of the Model View Controller pattern using Express as Webserver and MongoDB as database driver.
 
@@ -21,3 +21,9 @@ Full version of the Model View Controller pattern using Express as Webserver and
    `npm install`
 3. Now open `.env` file and change _DB_NAME_ value from **YOUR_DB_NAME** to your preference.
 4. Now everything is configured and you are ready to start building your site.
+
+
+## Deployment
+- Before deployment if you use Mongo Atlas put connection string into MONGO_ATLAS variable inside **.env** file.
+- After that go inside **database** folder and open **config.js** and change `${process.env.DB_HOST}${process.env.DB_NAME}` to
+`${process.env.MONGO_ATLAS}`
