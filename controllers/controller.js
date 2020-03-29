@@ -1,11 +1,9 @@
-/**
- * @index => Start
- * @show => Show single
- * @create => Insert queries
- * @update => Update query
- * @destroy => Remove query from database
- */
-
+const User = require("../models/User");
+/* 
+  Every controller action should pass a user 
+  object to view for navigation to work properly. 
+*/
 exports.index = async (req, res) => {
-  res.render("index");
+  const user = await User.findOne({ email: req.session.isAuthenticated });
+  res.render("index", { user });
 };

@@ -1,10 +1,29 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#toggler"
+    aria-controls="toggler" aria-expanded="false" aria-label="Navigation toggle">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <div class="container">
-    <a href="/" class="navbar-brand">Brand</a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a href="/" class="nav-link">Home</a>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="toggler">
+      <a href="/" class="navbar-brand">Application</a>
+      <ul class="navbar-nav ml-auto">
+        <% if (user) { %>
+        <li class="nav-item">
+          <a href="/" class="nav-link"><%= user.username %></a>
+        </li>
+        <li class="nav-item">
+          <a href="/auth/logout" class="nav-link">Logout</a>
+        </li>
+        <% } else { %>
+        <li class="nav-item">
+          <a href="/auth/login" class="nav-link">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a href="/auth/register" class="nav-link">Sign up</a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+
   </div>
 </nav>
